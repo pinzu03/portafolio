@@ -1,0 +1,26 @@
+@import "../../../styles/_styles.scss";
+
+.a-button {
+  padding: 10px 10px;
+  border-radius: 10px;
+  border: none;
+  color: black;
+  text-decoration: none;
+
+  &__container {
+    display: flex;
+  }
+
+  &--primary {
+    background-color: $color-primary;
+  }
+
+  &--secondary {
+    background-color: $color-secondary;
+  }
+
+  &__icon {
+    color: black;
+    margin-right: 5px;
+  }
+}
