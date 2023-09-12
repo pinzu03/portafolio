@@ -10,7 +10,7 @@ import { MoleculesModule } from './components/molecules/molecules.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 
-import { ROOT_REDUCERS } from './core/interfaces/store/app.state';
+import { ROOT_REDUCERS } from './interfaces/store/app.state';
 
 @NgModule({
   declarations: [

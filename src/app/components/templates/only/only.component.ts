@@ -1,23 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
-import { selectIsOpenMenu } from 'src/app/state/selectors/header.selectors';
+import { Component } from '@angular/core';
+
+import { MenuService } from 'src/app/services/menu/menu.service';
 
 @Component({
   selector: 'app-t-only-template',
   templateUrl: './only.component.html',
   styleUrls: ['./only.component.scss']
 })
-export class OnlyTemplateComponent implements OnInit {
+export class OnlyTemplateComponent {
 
-  isOpenMenu$: Observable<boolean> = new Observable();
+  constructor( private menuService: MenuService ) {}
 
-  constructor( private store: Store ) {}
-
-
-  ngOnInit(): void {
-    this.isOpenMenu$ = this.store.select(selectIsOpenMenu);
-
+  get isOpenMenu(): boolean {
+    return this.menuService.isOpenMenu;
   }
 
 }

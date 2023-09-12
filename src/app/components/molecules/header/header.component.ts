@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { toggleMenu } from 'src/app/state/actions/header.actions';
+import { MenuService } from '../../../services/menu/menu.service';
 
 @Component({
   selector: 'app-m-header',
@@ -9,11 +8,11 @@ import { toggleMenu } from 'src/app/state/actions/header.actions';
 })
 export class HeaderComponent {
 
-  constructor(private store: Store<any>) {}
+  constructor(private menuService: MenuService) {}
 
 
   toggleMenu(): void {
-    this.store.dispatch(toggleMenu({isOpen: true}))
+    this.menuService.toggleMenu(true);
   }
 
 }

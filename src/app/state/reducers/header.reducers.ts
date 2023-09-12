@@ -1,6 +1,6 @@
 import { createReducer, on } from '@ngrx/store';
 import { toggleMenu } from '../actions/header.actions';
-import { Menu } from 'src/app/core/interfaces';
+import { Menu } from 'src/app/interfaces';
 
 export const initialState: Menu = {
   isOpenMenu: false
