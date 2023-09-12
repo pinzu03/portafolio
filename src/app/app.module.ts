@@ -9,7 +9,8 @@ import { MoleculesModule } from './components/molecules/molecules.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
-import { menuReducer } from './state/reducers/header.reducers';
+
+import { ROOT_REDUCERS } from './core/interfaces/store/app.state';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { menuReducer } from './state/reducers/header.reducers';
     AppRoutingModule,
     TemplatesModule,
     MoleculesModule,
-    StoreModule.forRoot({ "Menu": menuReducer }),
+    StoreModule.forRoot(ROOT_REDUCERS),
     StoreDevtoolsModule.instrument({ name: "Portfolio" })
   ],
   providers: [],
