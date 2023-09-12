@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { toggleMenu } from 'src/app/state/actions/header.actions';
 
 @Component({
   selector: 'app-m-header',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+
+  constructor(private store: Store<any>) {}
+
+
+  toggleMenu(): void {
+    this.store.dispatch(toggleMenu({isOpen: true}))
+  }
 
 }

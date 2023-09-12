@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "portfolio-david-v2": {
+    "portfolio-david": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/portfolio-david-v2",
+            "outputPath": "dist/portfolio-david",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "portfolio-david-v2:build:production"
+              "browserTarget": "portfolio-david:build:production"
             },
             "development": {
-              "browserTarget": "portfolio-david-v2:build:development"
+              "browserTarget": "portfolio-david:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "portfolio-david-v2:build"
+            "browserTarget": "portfolio-david:build"
           }
         },
         "test": {

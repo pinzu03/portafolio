@@ -2,29 +2,29 @@
 
 .m-menu {
   &__background {
+    width: 100vw;
+    height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: black;
     z-index: 10;
+    background-color: black;
     opacity: 80%;
   }
 
   &__container {
     background-color: $blue-dark;
-    width: 50vw;
-    height: 100vh;
     position: absolute;
     top: 0;
     right: 0;
+    width: 50vw;
+    height: 50vh;
     z-index: 11;
     color: white;
     display: flex;
     flex-direction: column;
     padding: 20px 20px;
-
+    border-radius: 0 0 0 20px;
   }
 
   &__header {
@@ -40,17 +40,22 @@
     }
   }
 
-  &__list-container .m-menu__list-item {
+  &__close {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+  }
+
+  &__list-items .m-menu__list-item {
     padding: 20px;
   }
 
   &__list {
     list-style: none;
 
-    &-item {
-      & a {
-        color: white;
-      }
+    &-item a {
+      color: white;
     }
   }
 
@@ -63,20 +68,19 @@
     border-top: solid 1px white;
     padding-top: 10px;
 
+    & .m-menu__list {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: space-evenly;
+      align-items: center;
+      column-gap: 10px;
+      font-size: 40px;
+    }
   }
 }
 
-.m-menu__list-socials .m-menu__list {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: space-evenly;
-  align-items: center;
-  column-gap: 10px;
-  font-size: 40px;
-}
-
-@media (max-width: 377px) {
+@media (max-width: 401px) {
   .m-menu__list-socials .m-menu__list {
       font-size: 20px;
   }
