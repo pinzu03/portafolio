@@ -2,4 +2,4 @@
 <main class="t-main">
   <ng-content></ng-content>
 </main>
-<app-m-menu *ngIf="isOpenMenu"></app-m-menu>
+<app-m-menu *ngIf="isOpenMenu$ | async"></app-m-menu>

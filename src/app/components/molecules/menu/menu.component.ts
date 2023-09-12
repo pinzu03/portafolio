@@ -1,5 +1,7 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { MenuService } from 'src/app/services/menu/menu.service';
+import { Store } from '@ngrx/store';
+
+import { toggleMenu } from 'src/app/state/actions/header.actions';
 
 @Component({
   selector: 'app-m-menu',
@@ -11,7 +13,7 @@ export class MenuComponent {
   @ViewChild('menuBox') menuBox!: ElementRef<HTMLElement>;
   @ViewChild('menuBackground') menuBackground!: ElementRef<HTMLElement>;
 
-  constructor(private menuService: MenuService) {}
+  constructor(private store: Store) {}
 
   toggleMenu() {
 
@@ -19,7 +21,7 @@ export class MenuComponent {
     this.menuBackground.nativeElement.classList.add('m-menu__background--closed')
 
     const timeoutId = setTimeout(() => {
-      this.menuService.toggleMenu(false);
+      this.store.dispatch(toggleMenu())
       clearTimeout(timeoutId);
     }, 500)
 

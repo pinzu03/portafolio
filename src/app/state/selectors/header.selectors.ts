@@ -1,7 +1,10 @@
-import { createSelector } from '@ngrx/store';
-import { AppState, Menu } from 'src/app/interfaces';
+import { createFeatureSelector, createSelector } from '@ngrx/store';
 
-export const selectMenu = (state: AppState) => state.menu;
+import { Menu } from 'src/app/interfaces';
+
+const featureKey = "menu";
+
+const selectMenu = createFeatureSelector<Menu>(featureKey);
 
 export const selectIsOpenMenu = createSelector(
   selectMenu,

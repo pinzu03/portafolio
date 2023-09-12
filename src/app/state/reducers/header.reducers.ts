@@ -8,5 +8,5 @@ export const initialState: Menu = {
 
 export const menuReducer = createReducer(
   initialState,
-  on(toggleMenu, (state, { isOpen }) => ({...state, isOpenMenu: isOpen}))
+  on(toggleMenu, (state) => ({...state, isOpenMenu: !state.isOpenMenu}))
 );
