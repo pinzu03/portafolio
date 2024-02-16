@@ -40,6 +40,20 @@
     & h1 {
       font-size: 30px;
     }
+
+    & p {
+
+      &::-webkit-scrollbar{
+        width: 7px;
+        border: 1px solid white;
+        border-radius: 5px;
+      }
+
+      &::-webkit-scrollbar-thumb{
+        background-color: $color-primary;
+        border-radius: 5px;
+      }
+    }
   }
 
   &__photo {
@@ -124,6 +138,12 @@
     &__photo {
       height: 30%;
     }
+  }
+}
+
+@media (max-width: 450px) {
+  .m-presentation__description p {
+    padding-right: 5px;
   }
 }
 
