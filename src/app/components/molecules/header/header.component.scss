@@ -4,7 +4,7 @@
   width: 100vw;
   height: 70px;
   display: flex;
-  padding: 10px 100px;
+  padding: 10px 10%;
   background-color: $blue-dark;
   position: fixed;
   top: 0px;
@@ -37,6 +37,7 @@
 
     &-item {
       font-weight: 700;
+      letter-spacing: 1.5px;
 
       & a {
         padding: 10px 10px;
@@ -74,7 +75,7 @@
 
 @media (max-width: 800px) {
   .m-header {
-    padding: 10px 20px;
+    padding: 10px 5%;
     justify-content: space-between;
 
     &__list-section {

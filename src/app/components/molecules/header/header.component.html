@@ -4,6 +4,13 @@
       class="m-header__logo"
       src="assets/images/Logo-Pineda.svg"
       alt="logo Pineda - Marca"
+      *ngIf="!isMobile"
+    >
+    <img
+      class="m-header__logo"
+      src="assets/images/Logo-Pineda-simple.svg"
+      alt="logo Pineda - Marca"
+      *ngIf="isMobile"
     >
   </a>
   <section class="m-header__list-section">

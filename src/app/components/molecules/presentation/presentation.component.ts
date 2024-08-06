@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class PresentationComponent {
 
+  linkHV: string = "https://drive.google.com/file/d/14lT291dgiaGotccNcCt7wTuE4RjSwtRt/view?usp=drive_link";
+
 }
